@@ -6,11 +6,10 @@
 
   
 
-CarBook bir araç kiralama "Rent A Car" projesidir. Kullanıcılar lokasyon,tarih saat gibi bilgileri filtreleyip uygun araçları listeleyebilir ve kendisine uygun olabilecek aracı kolayca kiralayabilirler. Ayrıca araçların özelliklerini, açıklamalarını fiyat bilgilerini ve yorumlarını görüntüleyebilirler. CarBook içerisinde "Blog" kısmı da bulunmaktadır. Blog kısmında kullanıcılar ilgili bloglara yorum yapabilirler ve kendi bloglarını da sisteme kayıt olup yazabilirler. Proje içerisinde Admin Panel'i bulunmaktadır. Admin paneli üzerinden dinamik olarak veri ekleme, silme ve güncelleme işlemleri yapılabilmektedir.
-
+CarBook bir araç kiralama "Rent A Car" projesidir. Kullanıcılar lokasyon, tarih, saat gibi bilgileri filtreleyip uygun araçları listeleyebilir ve kendisine uygun olabilecek aracı kolayca kiralayabilirler. Ayrıca araçların özelliklerini, açıklamalarını fiyat bilgilerini ve yorumlarını görüntüleyebilirler. CarBook içerisinde "Blog" kısmı da bulunmaktadır. Blog kısmında kullanıcılar ilgili bloglara yorum yapabilir ve kendi bloglarını sisteme kayıt olup yazabilirler. Proje içerisinde "admin paneli" bulunmaktadır. Admin paneli üzerinden dinamik olarak veri ekleme, silme ve güncelleme işlemleri yapılabilmektedir.
   
 
-Bu proje, ASP.NET Core 8.0 Web API ve MVC kullanılarak geliştirilmiş olup Onion Architecture mimarisi temel alınarak yapılandırılmıştır. CQRS,Mediator ve Repository Tasarım Desenleri kullanılarak uygulamanın modülerliği, sürdürülebilirliği ve ölçeklenebilirliği artırılmıştır.JWT ile güvenli kimlik doğrulama sağlanırken, SignalR ile anlık veri iletimi ve gerçek zamanlı bildirimler desteklenmiştir. FluentValidation ile form ve veri girişlerinde güvenilir doğrulama mekanizmaları eklenmiştir. Veri tabanı işlemleri için Entity Framework Core kullanılmış, performans ve veri bütünlüğü için MSSQL tercih edilmiştir.
+Bu proje, ASP.NET Core 8.0 Web API ve MVC kullanılarak geliştirilmiş olup Onion Architecture mimarisi temel alınarak yapılandırılmıştır. CQRS, Mediator ve Repository Tasarım Desenleri kullanılarak uygulamanın modülerliği, sürdürülebilirliği ve ölçeklenebilirliği artırılmıştır. JWT ile güvenli kimlik doğrulama sağlanırken, SignalR ile anlık veri iletimi ve gerçek zamanlı bildirimler desteklenmiştir. FluentValidation ile form ve veri girişlerinde güvenilir doğrulama mekanizmaları eklenmiştir. Veri tabanı işlemleri için Entity Framework Core kullanılmış, performans ve veri bütünlüğü için MSSQL tercih edilmiştir.
 
   
 ## 🚀 Mimari ve Tasarım Desenleri
