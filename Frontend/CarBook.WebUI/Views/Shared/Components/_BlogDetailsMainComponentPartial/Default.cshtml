@@ -1,0 +1,26 @@
+﻿@model CarBook.Dto.BlogDtos.GetBlogById
+
+<div class="col-md-8 ftco-animate">
+	<h2 class="mb-3">@Model.Title</h2>
+	<p>@Model.Description.</p>
+	<p>
+		@await Component.InvokeAsync("_BlogDetailsMainCloudTagComponentPartial", new { id = ViewBag.blogId })
+
+		@await Component.InvokeAsync("_BlogDetailsMainAuthorAboutComponentPartial", new { id = ViewBag.blogId })
+		
+	
+
+	<div class="pt-5 mt-5">
+		<h3 class="mb-5">@ViewBag.commentCount
+			Yorum</h3>
+			@await Component.InvokeAsync("_CommentListByBlogComponentPartial", new { id = ViewBag.blogId })
+			
+			@*@await Component.InvokeAsync("_AddCommentComponentPartial")*@
+
+			<partial name="~/Views/Blog/AddComment.cshtml" ,new {id=ViewBag.blogId} />
+		
+
+		
+	</div>
+
+</div> <!-- .col-md-8 -->

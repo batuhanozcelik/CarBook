@@ -1,0 +1,36 @@
+﻿@model CarBook.Dto.BrandDtos.CreateBrandDto
+@{
+    ViewData["Title"] = "CreateBrand";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+
+
+
+<div class="page-content">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-xl-12">
+				<div class="card">
+					<div class="card-body">
+
+						<h4 class="card-title">Yeni Araç Markası Oluştur</h4>
+						<p class="card-subtitle mb-4">Gerekli kısma veri girişi yaptıktan sonra "Marka Oluştur" butonuna tıklayarak yeni özellik oluşturabilirsiniz.</p>
+
+						<form method="post">
+							<div class="form-group">
+								<label>Marka Adı</label>
+								<input type="text" class="form-control" asp-for="Name" placeholder="Marka Adı Giriniz">
+							</div>
+							<button type="submit" class="btn btn-success waves-effect waves-light">Marka Oluştur</button>
+						</form>
+
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</div>
+
+

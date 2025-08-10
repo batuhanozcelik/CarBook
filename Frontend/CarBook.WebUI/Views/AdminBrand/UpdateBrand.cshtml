@@ -1,0 +1,34 @@
+﻿@model CarBook.Dto.BrandDtos.UpdateBrandDto
+@{
+    ViewData["Title"] = "UpdateBrand";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="page-content">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-xl-12">
+				<div class="card">
+					<div class="card-body">
+
+						<h4 class="card-title">Araç Markası Güncelle</h4>
+						<p class="card-subtitle mb-4">Gerekli kısma veri girişi yaptıktan sonra "Marka Güncelle" butonuna tıklayarak yeni özellik oluşturabilirsiniz.</p>
+
+						<form method="post">
+							<div class="form-group">
+								<input type="hidden" asp-for="BrandId" />
+								<label>Marka Adı</label>
+								<input type="text" class="form-control" asp-for="Name" placeholder="Marka Adı Giriniz">
+							</div>
+							<button type="submit" class="btn btn-success waves-effect waves-light">Marka Güncelle</button>
+						</form>
+
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</div>
+
+

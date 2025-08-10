@@ -1,0 +1,37 @@
+﻿@model CarBook.Dto.FeatureDtos.CreateFeatureDto
+
+@{
+	ViewData["Title"] = "CreateFeature";
+	Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="page-content">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-xl-12">
+				<div class="card">
+					<div class="card-body">
+
+						<h4 class="card-title">Yeni Araç Özelliği Oluştur</h4>
+						<p class="card-subtitle mb-4">Gerekli kısma veri girişi yaptıktan sonra "Özellik Oluştur" butonuna tıklayarak yeni özellik oluşturabilirsiniz.</p>
+
+						<form method="post">
+							<div class="form-group">
+								<label>Özellik Adı</label>
+								<input type="text" class="form-control" asp-for="Name" placeholder="Özellik Adı Giriniz">
+							</div>
+							<button type="submit" class="btn btn-success waves-effect waves-light">Özellik Oluştur</button>
+						</form>
+
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</div>
+
+
+
+
+

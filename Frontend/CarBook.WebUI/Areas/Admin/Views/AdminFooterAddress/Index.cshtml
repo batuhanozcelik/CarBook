@@ -1,0 +1,62 @@
+﻿@model List<CarBook.Dto.FooterAddressDtos.ResultFooterAddressDto>
+@{
+	ViewData["Title"] = "Index";
+	Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="page-content">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-xl-12">
+				<div class="card">
+					<div class="card-body">
+						<h4 class="card-title">Footer Adres Listesi</h4>
+						<p class="card-subtitle mb-4">
+							Site sayfalarında en aşağı kısımda bulunan alandaki adres bilgilerini bu kısımda görüntüleyip güncelleyebilirsiniz.Ayrıca bu kısımda yapılan güncelleme <strong>İletişim</strong> sayfasınada yansıyacaktır. Harita bilgisini Google Map üzerinden alabilirsiniz.
+						</p>
+						<div class="table-responsive">
+							<table class="table mb-0">
+								<thead>
+									<tr>
+
+										<th>Adres</th>
+										<th>Telefon</th>
+										<th>Email</th>
+										<th>Açıklama</th>
+										<th>Sil</th>
+										<th>Güncelle</th>
+
+
+									</tr>
+								</thead>
+								<tbody>
+									@foreach (var item in Model)
+									{
+
+										<tr>
+											<td>@item.address</td>
+											<td>@item.phone</td>
+											<td>@item.email</td>
+											<td>@item.description</td>
+											<td><a href="/Admin/AdminFooterAddress/DeleteFooterAddress/@item.footerAddressId" class="btn btn-outline-danger">Sil</a></td>
+											<td><a href="/Admin/AdminFooterAddress/UpdateFooterAddress/@item.footerAddressId" class="btn btn-outline-success">Güncelle</a></td>
+
+										</tr>
+									}
+
+								</tbody>
+							</table>
+							<a href="/Admin/AdminFooterAddress/CreateFooterAddress" class="btn btn-primary">Yeni İletişim Bilgisi Oluştur</a>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+

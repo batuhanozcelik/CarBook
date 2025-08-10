@@ -1,0 +1,61 @@
+﻿@model List<CarBook.Dto.AuthorDtos.ResultAuthorDto>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+	int count = 0;
+}
+
+<div class="page-content">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-xl-12">
+				<div class="card">
+					<div class="card-body">
+						<h4 class="card-title">Yazar Listesi</h4>
+						<p class="card-subtitle mb-4">
+							Yazarların listesini bu sayfada görebilirsiniz. Yazar ekleme, silme ve güncelleme işlemlerini bu sayfada gerçekleştirebilirsiniz.
+						</p>
+						<div class="table-responsive">
+							<table class="table mb-0">
+								<thead>
+									<tr>
+										<th>#</th>
+										<th>Görsel</th>
+										<th>Ad Soyad</th>
+										<th>Açıklama</th>
+										<th>Sil</th>
+										<th>Güncelle</th>
+										<th>Yazarın Blogları</th>
+
+
+									</tr>
+								</thead>
+								<tbody>
+									@foreach (var item in Model)
+									{
+										count++;
+										<tr>
+											<th scope="row">@count</th>
+											<td><img style="width:50px; height:50px;" src="@item.ImageUrl" class="rounded-circle" /></td>
+											<td>@item.Name</td>
+											<td>@item.Description</td>
+											<td><a href="/Admin/AdminAuthor/DeleteAuthor/@item.AuthorId" class="btn btn-outline-danger">Sil</a></td>
+											<td><a href="/Admin/AdminAuthor/UpdateAuthor/@item.AuthorId" class="btn btn-outline-success">Güncelle</a></td>
+											<td><a href="/Admin/AdminAuthor/UpdateAuthor/@item.AuthorId" class="btn btn-outline-dark">Yazarın Blogları</a></td>
+										</tr>
+									}
+
+								</tbody>
+							</table>
+							<a href="/Admin/AdminAuthor/CreateAuthor/" class="btn btn-primary">Yeni Yazar Oluştur</a>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+

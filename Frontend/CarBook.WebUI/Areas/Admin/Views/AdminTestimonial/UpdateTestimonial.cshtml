@@ -1,0 +1,52 @@
+﻿@model CarBook.Dto.TestimonialDtos.UpdateTestimonialDto
+@{
+    ViewData["Title"] = "UpdateTestimonial";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="page-content">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-xl-12">
+				<div class="card">
+					<div class="card-body">
+
+						<h4 class="card-title">Referans Güncelle</h4>
+						<p class="card-subtitle mb-4">Kategori ile ilgili işlemlerin gerçekleştirileceği sayfadır. Yazarlar ile ilgili tüm alanların eksiksiz tamamlanması gerekmektedir.</p>
+
+						<form method="post">
+							<div class="form-group">
+								<input type="hidden" asp-for="TestimonialId" />
+								<label>Referans Adı Soyadı</label>
+								<input type="text" class="form-control" asp-for="Name" placeholder="Ad Soyad Giriniz">
+							</div>
+							<div class="form-group">
+								<label>Referans Başlığı</label>
+								<input type="text" class="form-control" asp-for="Title" placeholder="Title Giriniz">
+							</div>
+							<div class="form-group">
+								<label>Referans Yorumu</label>
+								<textarea class="form-control" rows="5" asp-for="Comment" placeholder="Yorumu Giriniz"></textarea>
+							</div>
+							<div class="form-group">
+								<label>Referans Görseli</label>
+								<input type="text" class="form-control" asp-for="ImageURL" placeholder="Görsel URL Giriniz">
+							</div>
+							<button type="submit" class="btn btn-success waves-effect waves-light">Referans Güncelle</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+

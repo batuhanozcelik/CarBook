@@ -1,0 +1,42 @@
+﻿@model CarBook.Dto.ServiceDtos.CreateServiceDto
+@{
+    ViewData["Title"] = "CreateService";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="page-content">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-xl-12">
+				<div class="card">
+					<div class="card-body">
+
+						<h4 class="card-title">Yeni Hizmet Oluştur</h4>
+						<p class="card-subtitle mb-4">Kategori ile ilgili işlemlerin gerçekleştirileceği sayfadır. Yazarlar ile ilgili tüm alanların eksiksiz tamamlanması gerekmektedir.</p>
+
+						<form method="post">
+							<div class="form-group">
+								<label>Hizmet Başlığı</label>
+								<input type="text" class="form-control" asp-for="Title" placeholder="Hizmet Başlığı Giriniz">
+							</div>
+							<div class="form-group">
+								<label>Hizmet Açıklaması</label>
+								<input type="text" class="form-control" asp-for="Description" placeholder="Hizmet Açıklaması Giriniz">
+							</div>
+							<div class="form-group">
+								<label>Hizmet IconURL</label>
+								<input type="text" class="form-control" asp-for="Icon" placeholder="Hizmet Icon Bilgisini Giriniz">
+							</div>
+							<button type="submit" class="btn btn-success waves-effect waves-light">Hizmet Oluştur</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+

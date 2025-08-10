@@ -1,0 +1,14 @@
+﻿@model List<CarBook.Dto.CommentDtos.ResultCommentDto>
+
+<ul class="comment-list">
+	@foreach (var item in Model)
+	{
+		<li class="comment">
+			<div class="comment-body">
+				<h3>@item.NameSurname</h3>
+				<div class="meta">@item.CreatedDate.ToString("dd/MM/yy hh:mm")</div>
+				<p>@item.Description</p>
+			</div>
+		</li>
+	}
+</ul>

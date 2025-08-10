@@ -1,0 +1,34 @@
+﻿@model CarBook.Dto.PricingDtos.UpdatePricingDto
+@{
+    ViewData["Title"] = "UpdatePricing";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="page-content">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-xl-12">
+				<div class="card">
+					<div class="card-body">
+
+						<h4 class="card-title">Yeni Banner Bilgisi Girişi</h4>
+						<p class="card-subtitle mb-4">Araçların günlük, haftalık, aylık ve benzeri kiralama opsiyonlarının güncellendiği sayfadır.</p>
+
+						<form method="post">
+							<div class="form-group">
+								<input type="hidden" asp-for="PricingId" />
+								<label>Ödeme Türü Adı</label>
+								<input type="text" class="form-control" asp-for="Name" placeholder="Başlık Giriniz">
+							</div>
+							<button type="submit" class="btn btn-success waves-effect waves-light">Ödeme Türünü Güncelle</button>
+						</form>
+
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</div>
+
+

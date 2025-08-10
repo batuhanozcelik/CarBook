@@ -1,0 +1,66 @@
+﻿@model List<CarBook.Dto.CarDtos.ResultCarWithBrandDtos>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+    int count = 0;
+}
+
+<div class="page-content">
+	<div class="container-fluid">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Araç Listesi</h4>
+                        <p class="card-subtitle mb-4">
+                           Araçların liste sayfasıdır. Bu sayfada araçların sayısını, marka, model ve kilometre bilgilerini görebilirsiniz. Ayrıca araçlarla ilgili silme, güncelleme, yeni araç oluşturma işlemlerini bu sayfa üzerinden yapabilirsinz. Detaylar kısmından araçların aktif olan özelliklerini görebilir ve özelliği pasif hale getirebilirsiniz. Özellik ata kısmından araca yeni özellik atayabilirsiniz.
+                        </p>
+                        <div class="table-responsive">
+                            <table class="table mb-0">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Marka</th>
+                                        <th>Model</th>
+                                        <th>Kilometre</th>
+                                        <th>Sil</th>
+                                        <th>Güncelle</th>
+                                        <th>Detaylar</th>
+                                        <th>Özellik Ata</th>
+                                        <th>Sitede Gör</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var item in Model)
+                                    {
+                                        count++;
+                                        <tr>
+                                            <th scope="row">@count</th>
+                                            <td>@item.brandName</td>
+                                            <td>@item.model</td>
+                                            <td>@item.km</td>
+                                            <td><a href="/AdminCar/DeleteCar/@item.carId" class="btn btn-outline-danger">Sil</a></td>
+                                            <td><a href="/AdminCar/UpdateCar/@item.carId" class="btn btn-outline-success">Güncelle</a></td>
+                                            <td><a href="/Admin/AdminCarFeature/Index/@item.carId" class="btn btn-outline-dark">Detaylar</a></td>
+                                            <td><a href="/Admin/AdminCarFeature/CreateFeatureByCarId" class="btn btn-outline-dark">Özellik Ata</a></td>
+                                            <td><a href="/AdminCar/CarDetail/@item.carId" class="btn btn-outline-warning">Sitede Gör</a></td>
+                                        </tr>
+                                    }
+                                    
+                                </tbody>
+                            </table>
+                            <a href="/AdminCar/CreateCar/" class="btn btn-primary">Yeni Araç Oluştur</a>
+                        </div>
+
+                    </div>
+                    <!-- end card-body-->
+                </div>
+                <!-- end card -->
+
+            </div>
+            <!-- end col -->
+        </div>
+
+	</div> <!-- container-fluid -->
+</div>
+<!-- End Page-content -->

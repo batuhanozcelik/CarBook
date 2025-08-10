@@ -1,0 +1,44 @@
+﻿@model List<CarBook.Dto.CommentDtos.ResultCommentDto>
+@{
+	ViewData["Title"] = "Index";
+	Layout = "~/Views/AdminLayout/Index.cshtml";
+	int count = 0;
+}
+
+<div class="page-content">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-xl-12">
+				<div class="card">
+					<div class="card-body">
+						<h4 class="card-title">Blog'a Ait Yorum Listesi</h4>
+						<p class="card-subtitle mb-4">
+							İlgili blog'a yapılan yorumların listesini burada görebilirsiniz. Ayrıca yorumları kaldırabilirsiniz.
+						</p>
+						
+							@foreach (var item in Model)
+							{
+								count++;
+								<div class="col-md-12">
+									<div class="card">
+										<h5 class="card-header">Yorum - @count - @item.CreatedDate.ToShortDateString()</h5>
+										<div class="card-body">
+											<h4 class="card-title">@item.NameSurname</h4>
+											<p class="card-text">
+												@item.Description
+											</p>
+											<a href="#" class="btn btn-primary waves-effect waves-light">Yorumu Kaldır</a>
+										</div>
+									</div>
+								</div>
+							}
+
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+

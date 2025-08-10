@@ -1,0 +1,45 @@
+﻿@model CarBook.Dto.FooterAddressDtos.UpdateFooterAddressDto
+@{
+    ViewData["Title"] = "UpdateFooterAddress";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="page-content">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-xl-12">
+				<div class="card">
+					<div class="card-body">
+
+						<h4 class="card-title">Yeni Adres Bilgisi Girişi</h4>
+						<p class="card-subtitle mb-4">Yazarlar ile ilgili işlemlerin gerçekleştirileceği sayfadır. Yazarlar ile ilgili tüm alanların eksiksiz tamamlanması gerekmektedir.</p>
+
+						<form method="post">
+							<div class="form-group">
+								<input type="hidden" asp-for="FooterAddressId" />
+								<label>Adres</label>
+								<input type="text" class="form-control" asp-for="Address" placeholder="Adres Bilgisini Giriniz">
+							</div>
+							<div class="form-group">
+								<label>Telefon</label>
+								<input type="tel" class="form-control" asp-for="Phone" placeholder="Telefon Bilgisini Giriniz">
+							</div>
+							<div class="form-group">
+								<label>Açıklama</label>
+								<input type="text" class="form-control" asp-for="Description" placeholder="Açıklama Bilgisini Giriniz">
+							</div>
+							<div class="form-group">
+								<label>Email</label>
+								<input type="email" class="form-control" asp-for="Email" placeholder="Email Bilgisini Giriniz">
+							</div>
+							<button type="submit" class="btn btn-success waves-effect waves-light">Adres Bilgisini Oluştur</button>
+						</form>
+
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</div>
+
